@@ -136,12 +136,63 @@ dogs = ["Bulldog", "Beagle", "Poodle", 1, 2.5, True]
 
 # TUPLES
 # you can't change tuples they are immutable unlike LISTS
-objects = {"Table", "Chair", "Lamp", 1, 2.5, False}
+objects = ("Table", "Chair", "Lamp", 1, 2.5, False)
+# print(objects[0:3])  # ('Table', 'Chair', 'Lamp')
+# print(objects[1:])  # ('Chair', 'Lamp', 1, 2.5, False)
 
 
 # DICTIONARIES
 # collections of keys and values pairs
 person = {"name": "Yemi", "age": 19, "is_student": True, "height": 5.9, "fruits": ["apple", "banana", "cherry"]}
-print(person["name"])  # Yemi
-print(list(person.keys()))  # ['name', 'age', 'is_student', 'height', 'fruits']
-print(list(person.values()))  # ['Yemi', 19, True, 5.9, ['apple', 'banana', 'cherry']]
+# print(person["name"])  # Yemi
+# print(list(person.keys()))  # ['name', 'age', 'is_student', 'height', 'fruits']
+# print(list(person.values()))  # ['Yemi', 19, True, 5.9, ['apple', 'banana', 'cherry']]
+
+
+
+
+# SETS
+# sets are unordered collections of unique elements, just like dictionaries but without key-value pairs.
+unique_numbers = {1, 2, 3, 4, 5, 1, 2}
+unique_str = {"apple", "banana", "cherry", "apple"}
+# print(unique_numbers)  # {1, 2, 3, 4, 5}
+# unique_numbers.add(6)  # Adds 6 to the set
+# print(unique_numbers)  # {1, 2, 3, 4, 5, 6}
+# unique_numbers.remove(3)  # Removes 3 from the set (if it exists)
+# print(unique_numbers)  # {1, 2, 4, 5, 6}
+# unique_numbers.discard(10)  # Removes 10 from the set if it exists, does nothing if it doesn't
+# print(unique_numbers)  # {1, 2, 4, 5, 6}
+# print(len(unique_numbers))  # 5
+# # unique_numbers.clear()  # Removes all elements from the set
+# # print(unique_numbers)  # set()
+
+# print(unique_str | unique_numbers)  # Union
+# print(unique_str & unique_numbers)  # Intersection
+# print(unique_str - unique_numbers)  # Difference
+# print(unique_str ^ unique_numbers)  # Symmetric Difference
+# print("banana" in unique_str)  # Membership Test
+# print("orange" in unique_str)  # Membership Test
+# print(len(unique_str))  # Length
+# print(sorted(unique_str))  # Sorted List of Elements
+
+
+
+# FUNCTIONS
+name = 'Yemi'
+def greet(name):
+    return "Hello, " + name + "!"
+
+print(greet(name))  # Hello, Yemi!
+print(greet("John"))  # Hello, John!
+print(greet(name="Alice"))  # Hello, Alice!
+
+
+# OBJECTS
+# EVERYTHING IN PYTHON IS AN OBJECT
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def bark(self):
+        return "Woof!"
