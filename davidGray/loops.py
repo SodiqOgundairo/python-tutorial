@@ -64,3 +64,5 @@ actions = ["codes", "eats", "sleeps"]
 for action in actions:
     for name in names:
         print(name + " " + action + ".")
+
+# find practical loops sin user_input.py
