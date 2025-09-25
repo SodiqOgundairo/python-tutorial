@@ -17,3 +17,12 @@ Jim.getBalance()
 Jim.deposit(100)
 
 Jim.transfer(100, Yemi)
+
+
+Ope = SavingsAcct(1000, 'Ope')
+
+Ope.getBalance()
+
+Ope.deposit(100)
+
+Ope.transfer(5000, Jim)
