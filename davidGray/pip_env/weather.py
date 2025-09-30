@@ -1,5 +1,5 @@
-import os
 from dotenv import load_dotenv
+import os
 import requests
 from pprint import pprint
 
@@ -11,7 +11,7 @@ def get_current_weather():
 
     city = input('\nEnter a city name:\n')
 
-    request_url = f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv('API_KEY')}&q={city}&units=metic'
+    request_url = f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv('API_KEY')}&q={city}&units=metric'
 
     # request_url = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}&units=metic'
 
