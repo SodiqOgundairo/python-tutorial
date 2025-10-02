@@ -23,7 +23,7 @@ def get_weather():
     weather_data = get_current_weather(city)
 
     # City not found by API
-    if not weather_data['cod'] != 200:
+    if not weather_data['cod'] == 200:
         return render_template('city-not-found.html')
 
     return render_template(
