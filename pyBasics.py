@@ -1,12 +1,13 @@
-## data types
-name = "Yemi" ## str
-age = 19 ## int
-is_student = True ## bool
-height = 5.9 ## float
-fruits = ["apple", "banana", "cherry"] ## list / array / tuples
-person = {"name": "Yemi", "age": 19} ## dict / object
-## complex data types
-coordinates = (10.0, 20.0) ## tuple
+# data types
+from enum import Enum
+name = "Yemi"  # str
+age = 19  # int
+is_student = True  # bool
+height = 5.9  # float
+fruits = ["apple", "banana", "cherry"]  # list / array / tuples
+person = {"name": "Yemi", "age": 19}  # dict / object
+# complex data types
+coordinates = (10.0, 20.0)  # tuple
 
 
 _jes = '20'
@@ -52,7 +53,7 @@ escape_str = "He said, \"Hello!\""
 
 # Python doesn't have a way to enforce a constant variable instead you can use naming conventions
 # to indicate that a variable should not be changed (WRITING CONSTANTS IN CAPITAL LETTERS). ALSO, enum module can be used to create constant variables.
-from enum import Enum
+
 
 class Constants(Enum):
     PI = 3.14
@@ -63,7 +64,7 @@ class Constants(Enum):
 # print(Constants.GRAVITY.value)  # 9.81
 
 
-# ENUMS 
+# ENUMS
 # Enums are a way to define a set of named constant values. They are useful for representing a fixed set of related values, such as days of the week, months of the year, or states in a state machine.
 
 
@@ -82,8 +83,8 @@ def check_number(num):
     else:
         return "Zero"
         # print(check_number(10))  # Positive
-        
-        
+
+
 # test_control = input("Enter True or False: ")
 # test_control = True
 # if test_control == "True":
@@ -92,7 +93,7 @@ def check_number(num):
 #     print("This is False")
 # else:
 #     print("Invalid input")
-    
+
 # greeting = input("Enter a greeting (morning, afternoon, evening): ").lower()
 # greeting = 'morning'
 # if greeting == 'morning':
@@ -102,9 +103,8 @@ def check_number(num):
 # elif greeting == 'evening':
 #     print("Good evening!")
 # else:
-#     print("Hello!")    
-    
-    
+#     print("Hello!")
+
 
 a = 2
 result = 2 if a == 0 else 3 if a == 1 else 4
@@ -143,12 +143,11 @@ objects = ("Table", "Chair", "Lamp", 1, 2.5, False)
 
 # DICTIONARIES
 # collections of keys and values pairs
-person = {"name": "Yemi", "age": 19, "is_student": True, "height": 5.9, "fruits": ["apple", "banana", "cherry"]}
+person = {"name": "Yemi", "age": 19, "is_student": True,
+          "height": 5.9, "fruits": ["apple", "banana", "cherry"]}
 # print(person["name"])  # Yemi
 # print(list(person.keys()))  # ['name', 'age', 'is_student', 'height', 'fruits']
 # print(list(person.values()))  # ['Yemi', 19, True, 5.9, ['apple', 'banana', 'cherry']]
-
-
 
 
 # SETS
@@ -176,9 +175,10 @@ unique_str = {"apple", "banana", "cherry", "apple"}
 # print(sorted(unique_str))  # Sorted List of Elements
 
 
-
 # FUNCTIONS
 name = 'Yemi'
+
+
 def greet(name):
     return "Hello, " + name + "!"
 
@@ -198,21 +198,17 @@ class Dog:
         return "Woof!"
 
 
-
-
-
 # LOOPS {we have 2 kind of loops}
-
 # While Loops
 loop_test = True
 while loop_test == True:
     # print('while loop working')
     loop_test = False
     # print('Loop ends here')
-    
-    
+
+
 # For Loops
-items_s = [1,2,3,4]
+items_s = [1, 2, 3, 4]
 # for item in items_s:
 #     print('for loop working')
 
@@ -226,8 +222,8 @@ items_s = [1,2,3,4]
 
 # for index, item in enumerate(items_s):
 #     print('index:', index, 'item:', item)
-    
-    
+
+
 # break and continue statements are used to interrupt loops in a block
 # continue stops the current iteration and moves to the next iteration
 # break stops the entire loop
@@ -238,8 +234,7 @@ for item in items_s:
     if item == 3:
         break  # Exit the loop when item is 3
     # print('item:', item)
-    
-    
+
 
 # CLASSES
 # Classes are blueprints for creating objects. They encapsulate data for the object and methods to manipulate that data.
@@ -249,7 +244,7 @@ for item in items_s:
 
 # __init__ is a special method called a constructor that is automatically called when an object of the class is created.
 # It is used to initialize the attributes of the class.
-class Cat:
+class Cat1:
     def __init__(self, name, color):
         self.name = name
         self.color = color
@@ -257,33 +252,32 @@ class Cat:
 # creating an object
     def meow(self):
         return "Meow!"
-    
-    
+
+
 # Creating an object of the Cat class
-my_cat = Cat("Whiskers", "Gray")
+my_cat = Cat1("Whiskers", "Gray")
 # print(my_cat.name)  # Whiskers
 # print(my_cat.color)  # Gray
 
 # print(my_cat.meow())  # Meow!
 
 
-
 # we can create another animal with the method walk()
 class Animal:
     def walk(self):
         print('walking')
-        
+
 # then create a cat class that inherits from Animal class
+
+
 class Cat(Animal):
     def my_cat(self):
         print('meow')
-        
+
 # creating a new object of class Cat will have the walk() method from Animal class
 # my_cat = Cat()
 # my_cat.walk()  # walking
 # my_cat.my_cat()  # meow
-
-
 
 
 # MODULES
@@ -309,14 +303,13 @@ class Cat(Animal):
 # hola()  # this is the specific class called in the lib folder
 
 
-
-# some modules in python are 
+# some modules in python are
 # math
-# import math 
+# import math
 # math.sqrt(16)  # 4.0
-# or 
+# or
 
-# from math import pi, sqrt   
+# from math import pi, sqrt
 # print(pi)  # 3.141592653589793
 # print(sqrt(25))  # 5.0
 
@@ -330,7 +323,7 @@ class Cat(Animal):
 # requests
 # http
 # urlib
-#  and many more  
+#  and many more
 
 
 # PEP8 is a style guide for python code that helps to write clean and readable code
@@ -341,9 +334,8 @@ class Cat(Animal):
 # use docstrings to describe functions and classes
 # write each statement on its own line
 # use spaces around operators and after commas
-# python files are encoded in UTF-8 by default  
+# python files are encoded in UTF-8 by default
 # etc.
-
 
 
 # DEBUGGING
@@ -357,16 +349,12 @@ class Cat(Animal):
 # same local and global scopes works the same as other programming languages
 
 
-
 # LAMBDA FUNCTIONS
 # lambda functions are small anonymous functions that can take any number of arguments but can only have one expression
 # they are often used as arguments to higher-order functions like map(), filter(), and reduce()
 # works like arrow functions in javascript
-
-lambda_add = lambda x, y: x + y
+def lambda_add(x, y): return x + y
 # print(lambda_add(2, 3))  # 5
-
-
 
 
 # RECURSION
@@ -383,18 +371,17 @@ def factorial(n):
 # print(factorial(3))  # 6
 
 
-
 # NESTED FUNCTIONS
 # nested functions are functions defined inside other functions
-def outer_function(phrase):
+def outer_function2(phrase):
     def inner_function(word):
         print(word)
 
     words = phrase.split(' ')
     for word in words:
         inner_function(word)
-    
-# outer_function("Hello from Yemi")
+
+# outer_function2("Hello from Yemi")
 
 
 # example 2
@@ -409,13 +396,13 @@ def count():
 # count()  # 1
 
 
-
 # CLOSURES
 # closures are functions that remember the values from their enclosing lexical scope even when the program flow is no longer in that scope
 def outer_function(msg):
     def inner_function():
         print(msg)
     return inner_function
+
 
 closure = outer_function("Hello, World!")
 # closure()  # Hello, World!
@@ -426,6 +413,8 @@ def make_multiplier(factor):
     def multiply(number):
         return number * factor
     return multiply
+
+
 double = make_multiplier(2)
 triple = make_multiplier(3)
 
@@ -433,14 +422,13 @@ triple = make_multiplier(3)
 # print(triple(5))  # 15
 
 
-
-
 # DECORATORS
 # decorators are functions that modify the behavior of other functions or methods
 # just like higher-order or callback functions in javascript
 def decorator_function(original_function):
     def wrapper_function():
-        print("Wrapper executed this before {}".format(original_function.__name__))
+        print("Wrapper executed this before {}".format(
+            original_function.__name__))
         return original_function()
     return wrapper_function
 
@@ -465,8 +453,6 @@ def example_function():
     pass
 
 
-
-
 # INTROSPECTION
 # introspection is the ability of a program to examine the type or properties of an object at runtime
 # you can use the type() function to get the type of an object
@@ -487,27 +473,23 @@ def example(n):
 # print(hasattr(5, '__call__'))  # False
 
 
-
-
 # ANNOTATIONS
 # annotations are a way to add metadata to functions, classes, and variables
 # they are used to provide hints about the types of arguments and return values of functions
 def add(x: int, y: int) -> int:
     return x + y
 
+
 # print(add(2, 3))  # 5
 # varables can also be annotated
-annotated_var : int = 0
-
-
-
+annotated_var: int = 0
 
 
 # EXCEPTIONS
 # exceptions are errors that occur during the execution of a program
 # they can be handled using try-except blocks
 
-# try: 
+# try:
 #     result = 10 / 0 ## change this figure to see difference
 #     print(result)
 # except ZeroDivisionError as e:
@@ -518,19 +500,19 @@ annotated_var : int = 0
 #     print("No errors occurred. Result is:", result)
 # finally:
 #     print("This block always executes.")
-    
-    
+
+
 # result = 2 / 0
 # print(result)  # This will raise a ZeroDivisionError
 
 
-# try: 
+# try:
 #     result = 2 / 0
 # except ZeroDivisionError:
 #     print("Error occurred: Division by zero is not allowed.")
 # finally:
 #     result = 2 / 2  # Ensure result is defined
-    
+
 # print("Result is:", result)  # Result is: 1
 
 
@@ -539,7 +521,7 @@ annotated_var : int = 0
 #     raise Exception("This is a custom exception")
 # except Exception as e:
 #     print("Caught an exception:", e)
-    
+
 # # you can also define your own exception classes by inheriting from the built-in Exception class
 # class CustomError(Exception):
 #     pass # pass means do nothing
@@ -548,9 +530,7 @@ annotated_var : int = 0
 #     raise CustomError("This is a custom error")
 # except CustomError as e:
 #     print("Caught a custom error:", e)
-    
-    
-    
+
 
 # THE WITH STATEMENT
 # the with statement is used to wrap the execution of a block with methods defined by a context manager
@@ -565,13 +545,11 @@ filename = 'lib/greeting.py'
 #     print(content)
 # finally:
 #     f.close()
-    
+
 # # you can write:
 # with open(filename, "r") as f:
 #     content = f.read()
 #     print(content)
-    
-    
 
 
 # # LIST COMPREHENSIONS
@@ -611,18 +589,18 @@ even_dict = {x: x**2 for x in numbers_list if x % 2 == 0}
 class Bird:
     def speak(self):
         return "Chirp!"
-    
+
+
 class Pig:
     def speak(self):
         return "Oink!"
+
 
 animal1 = Bird()
 animal2 = Pig()
 
 print(animal1.speak())  # Chirp!
 print(animal2.speak())  # Oink!
-
-
 
 
 # OPERATOR OVERLOADING
@@ -637,13 +615,12 @@ class Vector:
 
     def __repr__(self):
         return f"Vector({self.x}, {self.y})"
+
+
 v1 = Vector(2, 3)
 v2 = Vector(4, 5)
 v3 = v1 + v2
 print(v3)  # Vector(6, 8)
-
-
-
 
 
 # VIRTUAL ENVIRONMENTS
