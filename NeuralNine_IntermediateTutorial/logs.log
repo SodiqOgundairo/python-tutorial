@@ -1,0 +1,6 @@
+WARNING - 2025-10-04 13:25:24,591: division by zero;
+WARNING - 2025-10-04 13:25:24,592: invalid literal for int() with base 10: 'Hello';
+WARNING - 2025-10-04 13:26:02,435: division by zero;
+WARNING - 2025-10-04 13:26:02,436: invalid literal for int() with base 10: 'Hello';
+WARNING - 2025-10-04 13:26:36,073: division by zero;
+WARNING - 2025-10-04 13:26:36,074: invalid literal for int() with base 10: 'Hello';
